@@ -1,6 +1,4 @@
 # Veracode Sandboxes Helper
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Lerer_veracode-sandboxes-helper&metric=alert_status)](https://sonarcloud.io/dashboard?id=Lerer_veracode-sandboxes-helper)
-
 
 An Action to handle Sandboxes mainly as a set of clean-up activities such as:
 - Deleting a sandbox
@@ -77,7 +75,7 @@ jobs:
         env:
           VERACODE_API_ID: '${{ secrets.VERACODE_API_ID }}'
           VERACODE_API_SECRET: '${{ secrets.VERACODE_API_SECRET }}'
-        uses: lerer/veracode-sandboxes-helper@v1.0.1
+        uses: veracode/veracode-sandboxes-helper@v1.0.0
         with:
           activity: "remove-sandbox"
           app-name: "<YOUR VERACODE APPLICATION NAME>"
@@ -110,7 +108,7 @@ jobs:
         env:
           VERACODE_API_ID: '${{ secrets.VERACODE_API_ID }}'
           VERACODE_API_SECRET: '${{ secrets.VERACODE_API_SECRET }}'
-        uses: lerer/veracode-sandboxes-helper@v1.0.1
+        uses: veracode/veracode-sandboxes-helper@v1.0.0
         with:
           activity: "clean"
           app-name: "<YOUR VERACODE APPLICATION NAME>"
@@ -145,7 +143,7 @@ jobs:
         env:
           VERACODE_API_ID: '${{ secrets.VERACODE_API_ID }}'
           VERACODE_API_SECRET: '${{ secrets.VERACODE_API_SECRET }}'
-        uses: lerer/veracode-sandboxes-helper@v1.0.1 
+        uses: veracode/veracode-sandboxes-helper@v1.0.0 
         with:
           activity: "promote-latest-scan"
           app-name: "<YOUR VERACODE APPLICATION NAME>"
